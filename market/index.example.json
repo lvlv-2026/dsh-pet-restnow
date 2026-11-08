@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "title": { "zh": "DSH 插件市场", "en": "DSH Plugin Market" },
+  "description": {
+    "zh": "示例索引：只收录 dsh-pet-restnow 一个插件，用于提交给商城维护方合并。插件收录使用 format-1 索引，与公开的工作台目录（schemaVersion 2 / workbenches）不是同一份文件。",
+    "en": "Example format-1 plugin index containing only dsh-pet-restnow, for merging into the real market index. Not the schemaVersion-2 workbench catalog."
+  },
+  "metadata": {
+    "categories": {
+      "productivity": { "title": { "zh": "效率", "en": "Productivity" } }
+    },
+    "labels": {
+      "chinese": { "title": { "zh": "中文界面", "en": "Chinese UI" } },
+      "local-first": { "title": { "zh": "纯本地", "en": "Local only" } }
+    },
+    "sortKeys": {
+      "installs": { "title": { "zh": "安装量", "en": "Installs" }, "order": "desc" }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-pet-restnow",
+      "title": { "zh": "大肥鱼 × 歇会儿", "en": "RestNow Pet Bridge" },
+      "description": {
+        "zh": "让桌宠扩展番茄钟计时功能，能召唤番茄钟一起提醒你休息，帮你专注：如休息弹窗（含全屏）出现时桌宠走到卡片正上方陪着并出现相应的表情，桌宠右键菜单扩展出番茄钟相关功能等。建议搭配歇会儿RestNow使用，如需下载 https://xiehuier.cn",
+        "en": "Extends your desktop pet with a Pomodoro timer and summons the timer to remind you to rest and stay focused: when a break popup (including fullscreen) appears, the pet walks to the top of the card to keep you company and shows the matching expression; the pet's right-click menu gains Pomodoro-related actions. Best paired with RestNow (https://xiehuier.cn); download it there if needed."
+      },
+      "icon": "icons/dsh-pet-restnow.png",
+      "author": "RestNow",
+      "homepage": "https://xiehuier.cn",
+      "metadata": {
+        "category": "productivity",
+        "keywords": ["歇会儿", "restnow", "pomodoro", "休息提醒", "桌宠", "pet", "番茄钟", "专注", "右键菜单"],
+        "labels": ["chinese", "local-first"],
+        "sortKeys": { "installs": 0 }
+      },
+      "versions": [
+        {
+          "version": "0.4.7",
+          "publishTimestamp": 1794043482,
+          "source": { "type": "npm" },
+          "engines": { "node": ">=20" }
+        }
+      ]
+    }
+  ]
+}

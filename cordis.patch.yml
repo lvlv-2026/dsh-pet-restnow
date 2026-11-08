@@ -1,0 +1,34 @@
+# dsh-pet-restnow 的挂载声明：把桥插件插进 DSH 配置树。
+# id 必须全局唯一且与包名一致（DSH STORE 上架契约按它比对 entryId）。
+- insert:
+    - id: dsh-pet-restnow
+      name: 'dsh-pet-restnow'
+      config:
+        enabled: true
+        surface: desktop
+        bridgePort: 47110
+        # 优先走歇会儿 1.0.9+ 的本机桥（事件流 + 反向动作）。
+        # 旧版歇会儿没有 bridge.json 时会自动退回窗口观察器，不用手改这里。
+        useBridge: true
+        watchWindows: true
+        throttleMs: 10000
+        raisePetOnBreak: true
+        petTitle: dsh-pet
+        movePetOnBreak: true
+        petMoveCenterX: 0.64
+        petMoveBottomY: 0.64
+        # 陪工位：休息弹窗 / 番茄钟在用时把桌宠挪到旁边陪着，不遮挡。
+        # 依据歇会儿报上来的真实矩形（可见番茄钟本体 + 弹窗内容卡片）算座位。
+        # 全屏弹窗时用「卡片」而不是整屏遮罩，所以全屏也会陪。
+        accompany: true
+        accompanyMode: spring   # instant | spring | line（桌宠侧支持的移动方式）
+        accompanyGap: 10        # 桌宠与目标之间的最小间距（屏幕像素）——
+                                # 小一点才像「站在卡片上沿」，28 看着离得远
+        # /broadcast 带表情图（图名取自桌宠 /config 的 memes 表，对不上自动不带）
+        memeImage: true
+        # 右键点歇会儿功能而软件没开时：自动拉起，并给安装版带 --startup，
+        # 只显示番茄钟、不亮主界面；桥就绪后重发刚点的那条命令。
+        # 商店 MSIX 版无法转发启动参数，会降级为普通启动并明确提示。
+        autoLaunchRestNow: true
+        launchTomatoOnly: true
+        launchSettleMs: 450

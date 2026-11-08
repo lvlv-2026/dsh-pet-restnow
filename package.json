@@ -1,0 +1,38 @@
+{
+  "name": "dsh-pet-restnow",
+  "version": "0.4.8",
+  "description": "让桌宠扩展番茄钟计时功能，能召唤番茄钟一起提醒你休息，帮你专注：如休息弹窗（含全屏）出现时桌宠走到卡片正上方陪着并出现相应的表情，桌宠右键菜单扩展出番茄钟相关功能等。建议搭配歇会儿RestNow使用，如需下载 https://xiehuier.cn",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "restnow",
+    "pomodoro",
+    "break-reminder",
+    "desktop-pet",
+    "bridge"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.png",
+  "homepage": "https://xiehuier.cn",
+  "author": "RestNow",
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "使用说明.md",
+    "LICENSE",
+    "icon.png"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
